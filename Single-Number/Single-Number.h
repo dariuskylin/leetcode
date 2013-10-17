@@ -12,6 +12,11 @@
 #define _SINGLE_NUMBER_H_
 class Solution {
 public:
+	/*
+	 * 题意是：给定一个数组，每个数字都出现了2次，只有一个数字出现1次，找出这个数字。
+	 * 很显然这个题目可以使用异或求解，因为任何一个数字异或它本身都是0，即A^A=0;
+	 * 而0和任何数字A异或都是A，0^A=A.
+	 */
     int singleNumber(int A[], int n) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         int ret = 0;
