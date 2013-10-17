@@ -23,14 +23,15 @@ public:
 	 * leetcode就报超时错误了,所以不能使用。只能使用非递归的方法
 	 */
 
-	 /*
+	/*
 	 * 下面是递归式的解法，当n比较大时，会超时，这里在n=38时，leetcode就报超时错误了。
-	 int climbStairs(int n) {
+	int climbStairs(int n) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         if( n ==1 || n == 0)
             return 1;
         return climbStairs(n - 2) + climbStairs(n - 1);
-    }*/
+    }
+    */
     /*
      * 下面是非递归的方法，Accepted
      */
