@@ -18,5 +18,8 @@ int main()
     string s2("acce");
     Solution s;
     cout<<s.minDistance(s1, s2)<<endl;
+    string s21("ab");
+    string s22("bc");
+    cout<<s.minDistance(s21, s22)<<endl;
     return 0;
 }
