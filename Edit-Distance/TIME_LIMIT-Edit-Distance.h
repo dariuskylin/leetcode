@@ -21,9 +21,12 @@ public:
      * 1、若A[m]=B[n]，那么A[1,...,m]和B[1,...,n]的编辑距离应该等于A[1,...,m-1]和B[1,...,n-1]
      * 2、若A[m]!=B[n]，情况就比较复杂：编辑方法分为insert、delete、replace三种。我们需要分别
      *    求出这三种方法的最小值，然后从这三个值中再取最小值。
-     *    insert分为对A操作或B操作，所以有两个值，minDistance(A[1,...,m], B[1,...,n-1])和minDistance(A[1,...,m-1], B[1,...,n]) 
-     *    delete同样分为对A和B操作，两个值，minDistance(A[1,...,m], B[1,...,n-1])和minDistance(A[1,...,m-1], B[1,...,n])，可以发现与insert具有一样的值 
-     *    replace仅有一个值minDistance(A[1,...,m-1], B[1,...,n-1])
+     * 3、insert分为对A操作或B操作，所以有两个值，minDistance(A[1,...,m], B[1,...,n-1])和
+     *    minDistance(A[1,...,m-1], B[1,...,n]) 
+     * 4、delete同样分为对A和B操作，两个值，minDistance(A[1,...,m], B[1,...,n-1])和minDistance(A[1,...,m-1], B[1,...,n])，
+     *    可以发现与insert具有一样的值。 
+     * 5、replace仅有一个值minDistance(A[1,...,m-1], B[1,...,n-1])。
+     * 6、下面的解法使用的是自顶向下的递归式解法，多层嵌套，导致了最后的Time Limit Exceeded错误，超时
      */
     int minDistance(string word1, string word2) {
         // IMPORTANT: Please reset any member data you declared, as
