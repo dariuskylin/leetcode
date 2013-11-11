@@ -23,7 +23,7 @@ class Solution {
 public:
     /* 
      * 对树的问题，大多都可以使用递归来解决
-     * 思路很清晰，编码也比较简单
+     * 思路很清晰，编码也比较简单 
      * */
     int minDepth(TreeNode *root) {
         // IMPORTANT: Please reset any member data you declared, as
